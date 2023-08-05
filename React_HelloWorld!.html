@@ -16,10 +16,19 @@
     <div id="root">Wait...</div>
     <script type="text/babel">
         let dom = document.querySelector("#root");
+
+        let title = "タイトル"
+        let message = "Reactメッセージ"
+
+        const msgStyle = {
+            fontSize: "32px",
+            color: "red"
+        }
+
         let el = (
             <div>
-                <h2>JSX Sample</h2>
-                <p>This is sample.</p>
+                <h2>{title}</h2>
+                <p style={msgStyle}>{message}</p>
             </div>
         );
         ReactDOM.render(el, dom);
