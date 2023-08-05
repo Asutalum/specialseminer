@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -15,7 +14,16 @@
 <body>
     <h1>React App</h1>
     <div id="root">Wait...</div>
-    <script src="script.js"></script>
+    <script type="text/babel">
+        let dom = document.querySelector("#root");
+        let el = (
+            <div>
+                <h2>JSX Sample</h2>
+                <p>This is sample.</p>
+            </div>
+        );
+        ReactDOM.render(el, dom);
+    </script>
 </body>
 
 </html>
