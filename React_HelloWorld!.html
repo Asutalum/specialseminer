@@ -17,18 +17,19 @@
     <script type="text/babel">
         let dom = document.querySelector("#root");
 
-        let title = "タイトル"
-        let message = "Reactメッセージ"
-
-        const msgStyle = {
-            fontSize: "32px",
-            color: "red"
+        let message = function (msg, size, color) {
+            const msgStyle = {
+                fontSize: size,
+                color: color
+            };
+            return <p style={msgStyle}>{msg}</p>
         }
 
         let el = (
             <div>
-                <h2>{title}</h2>
-                <p style={msgStyle}>{message}</p>
+                {message("message1", 30, "red")}
+                {message("message2", 20, "blue")}
+                {message("message3", 10, "green")}
             </div>
         );
         ReactDOM.render(el, dom);
